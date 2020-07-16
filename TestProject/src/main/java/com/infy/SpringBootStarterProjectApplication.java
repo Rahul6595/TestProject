@@ -12,8 +12,10 @@ public class SpringBootStarterProjectApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx=SpringApplication.run(SpringBootStarterProjectApplication.class, args);
+		
 		Employee e= new Employee();
 		e=(Employee) ctx.getBean(Employee.class);
+		
 		e.setEid(123);
 		e.setEname("Rahul");
 		e.setEprofile("Engineer");
